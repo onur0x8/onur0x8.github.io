@@ -1,0 +1,7 @@
+---
+layout: default
+title: Makaleler
+permalink: /yazilar/
+---
+<section class="page-hero wrap"><p class="eyebrow">BİLGİ ARŞİVİ / 01</p><h1>Yazılar &amp; <em>notlar.</em></h1><p>Merak edilen konular, teknik açıklamalar ve zamanla biriken öğrenme notları.</p></section>
+<section class="wrap archive-section"><div class="archive-toolbar"><span>{{ site.posts.size }} yazı</span><a href="{{ '/kategoriler/' | relative_url }}">Kategorilere göre keşfet ↗</a></div><div class="post-grid archive-grid">{% for post in site.posts %}{% include post-card.html post=post %}{% endfor %}</div>{% if site.posts.size == 0 %}<div class="empty-state">Henüz yazı yayınlanmadı.</div>{% endif %}</section>

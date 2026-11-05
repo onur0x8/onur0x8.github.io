@@ -1,0 +1,11 @@
+---
+layout: default
+title: Kategoriler
+permalink: /kategoriler/
+---
+<section class="page-hero wrap"><p class="eyebrow">KONU BAŞLIKLARI / 02</p><h1>İlgi alanları &amp; <em>izlekler.</em></h1><p>Yazıları konu başlıklarına göre keşfet.</p></section>
+<section class="wrap category-index">
+{% assign categories = site.categories | sort %}
+{% for category in categories %}<section class="category-block" id="{{ category[0] | slugify }}"><div class="category-block-heading"><h2>{{ category[0] }}</h2><span>{{ category[1].size | prepend: '0' | slice: -2, 2 }} YAZI</span></div><div class="category-post-list">{% for post in category[1] %}<a class="category-post" href="{{ post.url | relative_url }}"><span>{{ post.title }}</span><time>{{ post.date | date: '%d.%m.%Y' }}</time><b>↗</b></a>{% endfor %}</div></section>{% endfor %}
+{% if site.categories.size == 0 %}<div class="empty-state">İlk makaleni eklediğinde kategoriler burada listelenecek.</div>{% endif %}
+</section>

@@ -1,0 +1,8 @@
+<article class="post-card">
+  <a class="post-card-link" href="{{ include.post.url | relative_url }}">
+    <div class="post-card-top"><span class="category-label">{{ include.post.categories | first | default: 'Notlar' }}</span><span class="post-card-arrow" aria-hidden="true">↗</span></div>
+    <h3>{{ include.post.title }}</h3>
+    <p>{{ include.post.description | default: include.post.excerpt | strip_html | strip_newlines | truncate: 130 }}</p>
+    <div class="post-card-meta"><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: '%d.%m.%Y' }}</time><span>·</span><span>{{ include.post.reading_time | default: '5 dk okuma' }}</span></div>
+  </a>
+</article>

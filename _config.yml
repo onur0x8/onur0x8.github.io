@@ -1,0 +1,34 @@
+title: "Kişisel Teknik Günlük"
+subtitle: "Teknoloji üzerine notlar, araştırmalar ve rehberler."
+description: "Yazılım, donanım ve siber güvenlik üzerine kişisel bilgi arşivi."
+url: "https://KULLANICI.github.io"
+baseurl: ""
+lang: "tr-TR"
+timezone: "Europe/Istanbul"
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+permalink: /yazilar/:title/
+show_excerpts: true
+excerpt_separator: "<!--more-->"
+
+# Yayına almadan önce bu alanları kendine göre düzenle.
+profile_name: "Adın Soyadın"
+profile_role: "Teknoloji meraklısı · Öğrenen · Üreten"
+profile_location: "Türkiye"
+github_username: ""
+contact_email: ""
+
+# İstersen ana sayfadaki tanıtım metnini buradan değiştirebilirsin.
+hero_kicker: "NOTLAR · ARAŞTIRMALAR · TEKNİK REHBERLER"
+hero_title: "Öğrendiklerimi <em>kaydediyorum.</em>"
+hero_description: "Yazılım, donanım ve siber güvenlik üzerine araştırmalar, açıklayıcı notlar ve teknik rehberler. Öğrendiklerimi düzenliyor, işe yarayan bilgileri paylaşıyorum."
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
