@@ -13,9 +13,11 @@ content:
     type: collection
     path: _posts
     format: yaml-frontmatter
-    filename: "{year}-{month}-{day}-{primary}.md"
+    filename:
+      template: "{year}-{month}-{day}-{title}.md"
+      field: false
     view:
-      fields: [title, categories, date]
+      fields: [title, date, categories, published]
       primary: title
       sort: [date, title]
       search: [title, description, categories, tags]
@@ -32,12 +34,12 @@ content:
         label: Makale başlığı
         type: string
         required: true
-        description: Yazının başlığını gir.
+        description: Makalenin başlığını yaz.
 
       - name: description
         label: Kısa açıklama
         type: text
-        description: Makale listesinde başlığın altında görünür.
+        description: Makale listelerinde başlığın altında görünür.
 
       - name: body
         label: Makale içeriği
@@ -45,9 +47,10 @@ content:
         required: true
         options:
           format: markdown
-          switcher: false
+          switcher: true
           media: images
           path: posts
+          extensions: [jpg, jpeg, png, webp, gif]
           rename: safe
 
       - name: date
@@ -55,14 +58,16 @@ content:
         type: date
         required: true
         options:
-          format: "yyyy-MM-dd"
+          time: true
+          format: "yyyy-MM-dd HH:mm:ss xx"
 
       - name: categories
-        label: Kategori
+        label: Kategoriler
         type: select
         required: true
         options:
           multiple: true
+          min: 1
           values:
             - Donanım
             - Siber Güvenlik
@@ -75,6 +80,12 @@ content:
         label: Etiketler
         type: string
         list: true
+        description: Aralarında Enter tuşuna basarak birden fazla etiket ekleyebilirsin.
+
+      - name: reading_time
+        label: Okuma süresi
+        type: string
+        description: Örnek: 6 dk okuma. Boş bırakırsan sitede varsayılan süre gösterilir.
 
       - name: cover
         label: Kapak görseli
@@ -85,16 +96,26 @@ content:
           extensions: [jpg, jpeg, png, webp, gif]
           rename: safe
 
+      - name: cover_alt
+        label: Kapak görseli açıklaması
+        type: string
+        description: Görseli görmeyen kullanıcılar için kısa açıklama.
+
+      - name: cover_caption
+        label: Kapak görseli alt yazısı
+        type: string
+        description: Görselin altında gösterilecek isteğe bağlı metin.
+
       - name: featured
         label: Ana sayfada öne çıkar
         type: boolean
         default: false
 
       - name: published
-        label: false
+        label: Yayınla
         type: boolean
-        hidden: true
-        default: true
+        default: false
+        description: Açık olduğunda makale sitede yayımlanır.
 
   - name: about
     label: Hakkımda sayfası
