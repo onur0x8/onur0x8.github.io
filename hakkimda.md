@@ -3,5 +3,8 @@ layout: default
 title: Hakkımda
 permalink: /hakkimda/
 ---
-<section class="page-hero wrap about-hero"><p class="eyebrow">KISACA BEN / 03</p><h1>Merak etmek,<br><em>öğrenmenin başlangıcı.</em></h1><p>Bu alanı kendini, ilgi alanlarını ve bu arşivi neden oluşturduğunu anlatmak için kullanabilirsin.</p></section>
-<section class="wrap about-content"><div class="about-monogram">N<span>.</span></div><div class="prose about-prose"><h2>Merhaba, ben {{ site.profile_name }}.</h2><p>Teknolojiye dair öğrendiklerimi, araştırmalarımı ve faydalı bulduğum kaynakları düzenli bir arşivde topluyorum.</p><p>Özellikle yazılım, donanım, işletim sistemleri ve siber güvenlik konularına ilgi duyuyorum. Bu site; notlarımı kalıcı hâle getirmek, karmaşık konuları sadeleştirmek ve öğrendiklerimi paylaşmak için hazırladığım kişisel bir alan.</p><h2>Bu arşivde neler var?</h2><p>Teknik rehberler, kavram açıklamaları, araştırma notları ve zaman içinde güncellenen makaleler. İçerikler kişisel öğrenme notları niteliğindedir; yeni bilgiler edindikçe gözden geçirilip güncellenebilir.</p><h2>Bağlantıda kal</h2><p>{% if site.github_username != '' %}<a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">GitHub profilim ↗</a>{% endif %}{% if site.contact_email != '' %} · <a href="mailto:{{ site.contact_email }}">E-posta gönder ↗</a>{% endif %}{% if site.github_username == '' and site.contact_email == '' %}GitHub kullanıcı adını ve e-posta adresini <code>_config.yml</code> dosyasına eklediğinde bağlantıların burada görünür.{% endif %}</p></div></section>
+<section class="page-hero wrap about-hero">
+  <p class="eyebrow">HAKKIMDA</p>
+  <h1>Hakkımda</h1>
+  <p>Teknoloji üzerine öğrendiğim ve araştırdığım konuları burada not alıyorum. Yazılarım ağırlıklı olarak siber güvenlik, yazılım, donanım ve işletim sistemleri üzerine.</p>
+</section>
