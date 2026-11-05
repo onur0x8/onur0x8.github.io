@@ -39,6 +39,17 @@ content:
         type: text
         description: Makale listesinde başlığın altında görünür.
 
+      - name: body
+        label: Makale içeriği
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: false
+          media: images
+          path: posts
+          rename: safe
+
       - name: date
         label: Yayın tarihi
         type: date
@@ -84,17 +95,6 @@ content:
         type: boolean
         hidden: true
         default: true
-
-      - name: body
-        label: Makale içeriği
-        type: rich-text
-        required: true
-        options:
-          format: markdown
-          switcher: false
-          media: images
-          path: posts
-          rename: safe
 
   - name: about
     label: Hakkımda sayfası
