@@ -42,9 +42,10 @@ content:
         description: Makale listelerinde başlığın altında görünür.
 
       - name: body
-        label: Makale içeriği
+        label: Makale metni
         type: rich-text
         required: true
+        description: "Bölüm başlığı eklemek için editörde ilgili satıra tıkla. Üst araç çubuğundaki Text menüsünden Heading 2 veya Heading 3 seç. Bu başlıklar yazının içindekiler listesine otomatik eklenir. Makalenin ana başlığı zaten yukarıdaki alandan gelir."
         options:
           format: markdown
           switcher: true
