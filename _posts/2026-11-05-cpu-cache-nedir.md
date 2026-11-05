@@ -13,8 +13,6 @@ reading_time: "6 dk okuma"
 
 Bu yazıda önbelleğin temel mantığını ve L1, L2, L3 seviyelerinin birbirinden nasıl ayrıldığını ele alacağız.
 
-<!--more-->
-
 ## CPU cache neden var?
 
 İşlemci çekirdekleri, modern RAM'e kıyasla çok daha hızlı çalışabilir. İşlemcinin ihtiyaç duyduğu veri RAM'den gelene kadar beklemesi, işlem hattında boşluklar oluşmasına neden olabilir. Önbellek, sık kullanılan verilerin işlemciye daha yakın tutulmasını sağlayarak ortalama erişim süresini düşürmeye yardımcı olur.
