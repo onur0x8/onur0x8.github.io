@@ -12,8 +12,6 @@ Bazı zararlı yazılım teknikleri, geleneksel bir dosya olarak diskte bulunmak
 
 Bu yazıda bellek üzerinde çalışan tehditleri kavramsal düzeyde inceleyip savunma tarafında hangi sinyallerin anlamlı olabileceğine bakacağız.
 
-<!--more-->
-
 ## Bellek üzerinde çalışma ne anlama gelir?
 
 Bir program çalışırken kodu, verileri ve çalışma durumu RAM'de tutulur. Bellek tabanlı tehditler, kötü amaçlı etkinliklerinin bir bölümünü bu çalışma alanında gerçekleştirebilir. Bazı örneklerde diskte bir dosya da bulunabilir; bazılarında ise saldırganın amacı diske bırakılan izleri azaltmaktır.
