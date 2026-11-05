@@ -114,7 +114,7 @@ content:
       - name: published
         label: Yayınla
         type: boolean
-        default: false
+        default: true
         description: Açık olduğunda makale sitede yayımlanır.
 
   - name: about
