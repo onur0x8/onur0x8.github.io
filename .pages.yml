@@ -1,0 +1,100 @@
+media:
+  - name: images
+    label: Görseller
+    input: assets/images
+    output: /assets/images
+    extensions: [jpg, jpeg, png, webp, gif, svg]
+    categories: [image]
+    rename: safe
+
+content:
+  - name: posts
+    label: Makaleler
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{title}.md"
+      field: create
+    view:
+      fields: [title, categories, date, published]
+      primary: title
+      sort: date
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+        default: post
+      - name: title
+        label: Başlık
+        type: string
+        required: true
+      - name: description
+        label: Kısa açıklama
+        type: text
+      - name: date
+        label: Yayın tarihi
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: categories
+        label: Kategoriler
+        type: select
+        options:
+          multiple: true
+          values:
+            - Donanım
+            - Siber Güvenlik
+            - Yazılım
+            - İşletim Sistemleri
+            - Teknik Rehberler
+            - Araştırma Notları
+      - name: tags
+        label: Etiketler
+        type: string
+        list: true
+      - name: reading_time
+        label: Okuma süresi
+        type: string
+      - name: featured
+        label: Ana sayfada öne çıkar
+        type: boolean
+      - name: published
+        label: Yayınla
+        type: boolean
+      - name: cover
+        label: Kapak görseli
+        type: image
+        options:
+          media: images
+          path: posts
+      - name: cover_alt
+        label: Görsel açıklaması
+        type: string
+      - name: cover_caption
+        label: Görsel alt yazısı
+        type: string
+      - name: body
+        label: Makale içeriği
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+          path: posts
+          rename: safe
+
+  - name: about
+    label: Hakkımda sayfası (kaynak)
+    type: file
+    path: hakkimda.md
+    format: code
+
+  - name: site_config
+    label: Site ayarları (YAML)
+    type: file
+    path: _config.yml
+    format: code
