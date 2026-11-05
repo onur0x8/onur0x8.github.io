@@ -1,7 +1,7 @@
-title: "Kişisel Teknik Günlük"
-subtitle: "Teknoloji üzerine notlar, araştırmalar ve rehberler."
-description: "Yazılım, donanım ve siber güvenlik üzerine kişisel bilgi arşivi."
-url: "https://KULLANICI.github.io"
+title: "onur0x8"
+subtitle: "Teknik notlar ve araştırmalar"
+description: "Siber güvenlik, yazılım, donanım ve işletim sistemleri üzerine notlar ve araştırmalar."
+url: "https://onur0x8.github.io"
 baseurl: ""
 lang: "tr-TR"
 timezone: "Europe/Istanbul"
@@ -13,17 +13,15 @@ permalink: /yazilar/:title/
 show_excerpts: true
 excerpt_separator: "<!--more-->"
 
-# Yayına almadan önce bu alanları kendine göre düzenle.
-profile_name: "Adın Soyadın"
-profile_role: "Teknoloji meraklısı · Öğrenen · Üreten"
+profile_name: "onur0x8"
+profile_role: "Teknik notlar"
 profile_location: "Türkiye"
-github_username: ""
+github_username: "onur0x8"
 contact_email: ""
 
-# İstersen ana sayfadaki tanıtım metnini buradan değiştirebilirsin.
-hero_kicker: "NOTLAR · ARAŞTIRMALAR · TEKNİK REHBERLER"
-hero_title: "Öğrendiklerimi <em>kaydediyorum.</em>"
-hero_description: "Yazılım, donanım ve siber güvenlik üzerine araştırmalar, açıklayıcı notlar ve teknik rehberler. Öğrendiklerimi düzenliyor, işe yarayan bilgileri paylaşıyorum."
+hero_kicker: "SİBER GÜVENLİK · YAZILIM · DONANIM"
+hero_title: "Teknik notlarım."
+hero_description: "Siber güvenlik, yazılım, donanım ve işletim sistemleri üzerine öğrendiklerim ve araştırmalarım."
 
 exclude:
   - README.md
