@@ -13,13 +13,11 @@ content:
     type: collection
     path: _posts
     format: yaml-frontmatter
-    filename:
-      template: "{year}-{month}-{day}-{title}.md"
-      field: create
+    filename: "{year}-{month}-{day}-{primary}.md"
     view:
-      fields: [title, categories, date, published]
+      fields: [title, categories, date]
       primary: title
-      sort: date
+      sort: [date, title]
       search: [title, description, categories, tags]
       default:
         sort: date
@@ -29,23 +27,29 @@ content:
         type: string
         hidden: true
         default: post
+
       - name: title
-        label: Başlık
+        label: Makale başlığı
         type: string
         required: true
+        description: Yazının başlığını gir.
+
       - name: description
         label: Kısa açıklama
         type: text
+        description: Makale listesinde başlığın altında görünür.
+
       - name: date
-        label: Yayın tarihi ve saati
+        label: Yayın tarihi
         type: date
         required: true
         options:
-          time: true
-          format: "yyyy-MM-dd'T'HH:mm:ssxxx"
+          format: "yyyy-MM-dd"
+
       - name: categories
-        label: Kategoriler
+        label: Kategori
         type: select
+        required: true
         options:
           multiple: true
           values:
@@ -55,21 +59,12 @@ content:
             - İşletim Sistemleri
             - Teknik Rehberler
             - Araştırma Notları
+
       - name: tags
         label: Etiketler
         type: string
         list: true
-      - name: reading_time
-        label: Okuma süresi
-        type: string
-      - name: featured
-        label: Ana sayfada öne çıkar
-        type: boolean
-        default: false
-      - name: published
-        label: Yayınla
-        type: boolean
-        default: true
+
       - name: cover
         label: Kapak görseli
         type: image
@@ -78,17 +73,25 @@ content:
           path: posts
           extensions: [jpg, jpeg, png, webp, gif]
           rename: safe
-      - name: cover_alt
-        label: Görsel açıklaması
-        type: string
-      - name: cover_caption
-        label: Görsel alt yazısı
-        type: string
+
+      - name: featured
+        label: Ana sayfada öne çıkar
+        type: boolean
+        default: false
+
+      - name: published
+        label: false
+        type: boolean
+        hidden: true
+        default: true
+
       - name: body
         label: Makale içeriği
         type: rich-text
+        required: true
         options:
           format: markdown
+          switcher: false
           media: images
           path: posts
           rename: safe
@@ -106,4 +109,5 @@ content:
     format: code
 
 settings:
-  content: true
+  content:
+    merge: true
